@@ -151,7 +151,7 @@ then
   if [[ "${UNAME_MACHINE}" == "arm64" ]]
   then
     # On ARM macOS, this script installs to /opt/homebrew only
-    HOMEBREW_PREFIX="/Users/{USER}/homebrew"
+    HOMEBREW_PREFIX="/Users/{INSERT_USER}/homebrew"
     HOMEBREW_REPOSITORY="${HOMEBREW_PREFIX}"
   else
     # On Intel macOS, this script installs to /usr/local only
@@ -168,7 +168,7 @@ then
   GROUP="staff"
   TOUCH=("/usr/bin/touch")
   # INSTALL=("/usr/bin/install" -d -o "root" -g "wheel" -m "0755")
-  INSTALL=("/usr/bin/install" -d -o "{USER}" -g "staff" -m "0755")
+  INSTALL=("/usr/bin/install" -d -o "{INSERT_USER}" -g "staff" -m "0755")
 else
   UNAME_MACHINE="$(uname -m)"
 
